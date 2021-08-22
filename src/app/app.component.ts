@@ -17,6 +17,6 @@ export class AppComponent {
   ];
 
   get filterByAge() {
-    return this.userlist.filter(x => x.age > 28);
+    return this.userlist.filter(x => (x.age > 28 && x.gender == 'f'));
   }
 }
