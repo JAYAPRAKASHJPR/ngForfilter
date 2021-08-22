@@ -7,6 +7,9 @@ import { Component, VERSION } from '@angular/core';
 })
 export class AppComponent {
   name = 'Angular ' + VERSION.major;
+  ages: number = 68;
+  genders: string = 'm';
+
   userlist = [
     { sno: 1, name: 'jp', age: 26, gender: 'm' },
     { sno: 2, name: 'jp1', age: 27, gender: 'f' },
@@ -17,6 +20,6 @@ export class AppComponent {
   ];
 
   get filterByAge() {
-    return this.userlist.filter(x => (x.age > 28 && x.gender == 'f'));
+    return this.userlist.filter(x => x.age > this.ages && x.gender == this.genders);
   }
 }

@@ -3,7 +3,9 @@
   Start editing to see some magic happen :)
 </p>
 
-<div *ngFor="let users of filterByAge">
+Age: <input type="number" [(ngModel)]="ages" /> <br />
+Gender: <input type="text" [(ngModel)]="genders" />
 
+<div *ngFor="let users of filterByAge">
   {{users| json}}
 </div>
